@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://bnlpwhu01sovw"]
+
+[ext_resource type="Script" path="res://Player.gd" id="2_bm4b7"]
+[ext_resource type="Texture2D" uid="uid://bg6n45egax0og" path="res://Assets/CharPH.png" id="2_e0o65"]
+[ext_resource type="Script" path="res://LevelLoader.gd" id="4_vosjg"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_v0faa"]
+radius = 6.0
+height = 28.0
+
+[node name="Game" type="Node2D"]
+
+[node name="Player" type="CharacterBody2D" parent="."]
+position = Vector2(160.375, 567.168)
+scale = Vector2(2, 2)
+script = ExtResource("2_bm4b7")
+
+[node name="Sprite2D" type="Sprite2D" parent="Player"]
+texture = ExtResource("2_e0o65")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+position = Vector2(-0.112762, -0.458431)
+shape = SubResource("CapsuleShape2D_v0faa")
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+limit_left = 0
+limit_top = 0
+
+[node name="LevelLoader" type="Node" parent="."]
+script = ExtResource("4_vosjg")

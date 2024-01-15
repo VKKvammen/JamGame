@@ -1,0 +1,54 @@
+[gd_scene load_steps=5 format=3 uid="uid://b1d2x3x13oy0g"]
+
+[ext_resource type="Texture2D" uid="uid://cvjtjhjj7rcri" path="res://Assets/testTiles.png" id="1_af4dq"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0h14e"]
+texture = ExtResource("1_af4dq")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+1:0/0 = 0
+1:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:0/0/physics_layer_0/angular_velocity = 0.0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+2:0/0 = 0
+2:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:0/0/physics_layer_0/angular_velocity = 0.0
+3:0/0 = 0
+3:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:0/0/physics_layer_0/angular_velocity = 0.0
+0:1/0 = 0
+0:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:1/0/physics_layer_0/angular_velocity = 0.0
+1:1/0 = 0
+1:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:1/0/physics_layer_0/angular_velocity = 0.0
+2:1/0 = 0
+2:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:1/0/physics_layer_0/angular_velocity = 0.0
+3:1/0 = 0
+3:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:1/0/physics_layer_0/angular_velocity = 0.0
+
+[sub_resource type="TileSet" id="TileSet_gslgv"]
+tile_size = Vector2i(32, 32)
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_0h14e")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1coqe"]
+size = Vector2(1899, 662)
+
+[node name="Level" type="Node2D"]
+
+[node name="Map" type="TileMap" parent="."]
+position = Vector2(0, 1)
+tile_set = SubResource("TileSet_gslgv")
+collision_animatable = true
+format = 2
+layer_0/tile_data = PackedInt32Array(655360, 65536, 0, 393266, 65536, 0, 458802, 65536, 0, 524338, 65536, 0, 589874, 65536, 0, 655410, 65536, 0, 589824, 65536, 0, 524288, 65536, 0, 458752, 65536, 0, 393216, 65536, 0, 327680, 65536, 0, 262144, 65536, 0, 196608, 65536, 0, 131072, 65536, 0, 65536, 65536, 0, 0, 65536, 0, 720896, 65536, 0, 786432, 65536, 0, 851968, 65536, 0, 917504, 65536, 0, 983040, 65536, 0, 1048576, 65536, 0, 1114112, 65536, 0, 1179648, 65536, 0, 1245184, 65536, 0, 1245185, 65536, 0, 1245186, 65536, 0, 1245187, 65536, 0, 1245188, 65536, 0, 1245189, 65536, 0, 1245190, 65536, 0, 1245191, 65536, 0, 1245192, 65536, 0, 1245193, 65536, 0, 1245194, 65536, 0, 1245195, 65536, 0, 1245196, 65536, 0, 1245197, 65536, 0, 1245198, 65536, 0, 1245199, 65536, 0, 1245200, 65536, 0, 1245201, 65536, 0, 1245202, 65536, 0, 1245203, 65536, 0, 1245204, 65536, 0, 1245205, 65536, 0, 1245206, 65536, 0, 1245207, 65536, 0, 1245208, 65536, 0, 1245209, 65536, 0, 1245210, 65536, 0, 1245211, 65536, 0, 1245212, 65536, 0, 1245213, 65536, 0, 1245214, 65536, 0, 1245215, 65536, 0, 1245216, 65536, 0, 1179680, 65536, 0, 1114144, 65536, 0, 1048608, 65536, 0, 983072, 65536, 0, 917536, 65536, 0, 917537, 65536, 0, 917538, 65536, 0, 917539, 65536, 0, 917540, 65536, 0, 917541, 65536, 0, 917542, 65536, 0, 917543, 65536, 0, 917544, 65536, 0, 917545, 65536, 0, 917546, 65536, 0, 917547, 65536, 0, 917548, 65536, 0, 917549, 65536, 0, 917550, 65536, 0, 917551, 65536, 0, 917552, 65536, 0, 917553, 65536, 0, 917554, 65536, 0, 852018, 65536, 0, 786482, 65536, 0, 720946, 65536, 0, 393267, 65536, 0, 393268, 65536, 0, 393269, 65536, 0, 393270, 65536, 0, 393271, 65536, 0, 393272, 65536, 0, 393273, 65536, 0, 393274, 65536, 0)
+
+[node name="CameraBounds" type="CollisionShape2D" parent="Map"]
+position = Vector2(939.5, 321)
+shape = SubResource("RectangleShape2D_1coqe")
+disabled = true
