@@ -5,7 +5,7 @@ var camera
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	camera = get_node("/root/Game/Player/Camera2D")
-	load_level("res://levels/Level_1.tscn")
+	load_level("Levels/level_1.tscn")
 	pass # Replace with function body.
 
 

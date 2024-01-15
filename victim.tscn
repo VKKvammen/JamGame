@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://ono3p6a0qesu"]
+
+[ext_resource type="Script" path="res://Victim.gd" id="1_3m2pn"]
+[ext_resource type="Texture2D" uid="uid://bg6n45egax0og" path="res://Assets/CharPH.png" id="1_7w4sr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vttmj"]
+size = Vector2(14, 28)
+
+[node name="Victim" type="Node2D"]
+
+[node name="HitBox" type="Area2D" parent="."]
+script = ExtResource("1_3m2pn")
+
+[node name="Sprite2D" type="Sprite2D" parent="HitBox"]
+texture = ExtResource("1_7w4sr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
+position = Vector2(0, -1)
+shape = SubResource("RectangleShape2D_vttmj")

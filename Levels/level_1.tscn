@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://b1d2x3x13oy0g"]
+[gd_scene load_steps=6 format=3 uid="uid://b1d2x3x13oy0g"]
 
 [ext_resource type="Texture2D" uid="uid://cvjtjhjj7rcri" path="res://Assets/testTiles.png" id="1_af4dq"]
+[ext_resource type="PackedScene" uid="uid://ono3p6a0qesu" path="res://victim.tscn" id="2_2u2t2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0h14e"]
 texture = ExtResource("1_af4dq")
@@ -52,3 +53,7 @@ layer_0/tile_data = PackedInt32Array(655360, 65536, 0, 393266, 65536, 0, 458802,
 position = Vector2(939.5, 321)
 shape = SubResource("RectangleShape2D_1coqe")
 disabled = true
+
+[node name="Victim" parent="." instance=ExtResource("2_2u2t2")]
+position = Vector2(1108, 397)
+scale = Vector2(4, 4)
