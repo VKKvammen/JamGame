@@ -29,7 +29,7 @@ func clear_current_level(level_root: Node):
 		child.queue_free()
 
 func set_camera_limits(level_instance: Node):
-	var camera_bounds = level_instance.get_node("Map/CameraBounds")
+	var camera_bounds = level_instance.get_node("Map/CameraBounds/Area")
 	if camera_bounds:
 		var rect = camera_bounds.shape.extents * 2 
 		var global_position = camera_bounds.global_position

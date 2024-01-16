@@ -9,7 +9,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	var overlap = get_overlapping_bodies()
+	var overlap = get_overlapping_areas()
 	if overlap:
 		print(overlap)
 	pass
